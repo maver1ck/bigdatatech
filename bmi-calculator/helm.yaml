@@ -1,0 +1,6 @@
+service:
+  type: NodePort
+
+image:
+  repository: bmi-calculator
+  tag: 0.1
