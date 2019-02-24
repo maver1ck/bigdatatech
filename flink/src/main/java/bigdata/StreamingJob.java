@@ -92,8 +92,7 @@ public class StreamingJob {
 
 		DataStreamSource<ObjectNode> bmi = env.addSource(new FlinkKafkaConsumer<>("bmi",
 				new JSONKeyValueDeserializationSchema(true), kafkaProperties));
-		SingleOutputStreamOperator<Double> values = bmi.map(node -> node.get("value").get("bmi").asDouble());
-		values.windowAll(GlobalWindows.create()).trigger(CountTrigger.of(1)).aggregate(new AverageAggregate()).print();
+		bmi.print()
 
 		env.execute("Flink Streaming BMI aggregation");
 	}
