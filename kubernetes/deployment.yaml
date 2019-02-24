@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: bmi-calculator
-        image: bmi-calculator:0.1
+        image: IMAGE_NAME:IMAGE_TAG
         ports:
         - containerPort: 5000
 ---
