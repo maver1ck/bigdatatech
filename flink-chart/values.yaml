@@ -1,0 +1,16 @@
+image: flink
+imageTag: 1.7
+
+resources:
+  jobmanager:
+    limits:
+      memory: 1280Mi
+  taskmanager:
+    limits:
+      memory: 1280Mi
+
+flink:
+  jobmanager_heap_mb: 1024
+  taskmanager_heap_mb: 1024
+  num_taskmanagers: 1
+  num_slots_per_taskmanager: 1
