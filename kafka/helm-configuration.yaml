@@ -1,3 +1,30 @@
 cp-kafka-connect:
   customEnv:
     CONNECT_LOG4J_LOGGERS: org.reflections=ERROR
+  prometheus:
+    jmx:
+      enabled: false
+
+cp-kafka:
+  prometheus:
+    jmx:
+      enabled: false
+
+cp-ksql-server:
+  enabled: false
+
+cp-zookeeper:
+  prometheus:
+    jmx:
+      enabled: false
+
+cp-kafka-rest:
+  prometheus:
+    jmx:
+      enabled: false
+
+cp-schema-registry:
+  prometheus:
+    jmx:
+      enabled: false
+
