@@ -27,7 +27,6 @@ metadata:
 spec:
   selector:
     app: bmi-calculator
-  type: NodePort
   ports:
   - port: 5000
 
