@@ -1,5 +1,5 @@
 # Base image is Python
-FROM python
+FROM python:3.6.7
 
 # Copy all the files
 COPY . .
