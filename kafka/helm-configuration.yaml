@@ -28,3 +28,5 @@ cp-schema-registry:
     jmx:
       enabled: false
 
+cp-control-center:
+  enabled: false
