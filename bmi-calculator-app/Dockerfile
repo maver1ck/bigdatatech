@@ -1,5 +1,5 @@
 # Base image is Python
-FROM python:3.6.7
+FROM python:3.6.7-slim
 
 # Copy all the files
 COPY . .
@@ -8,7 +8,7 @@ COPY . .
 RUN pip install -r requirements.txt
 
 # You need to specify Python file we're running
-ENTRYPOINT ["python", $APPLICATION_FILE]
+ENTRYPOINT ["python", __TO_FIX_APPLICATION_FILE__]
 
 # You need to specify port where application is listening
-EXPOSE $APPLICATION_PORT
+EXPOSE __TO_FIX_APPLICATION_PORT__
