@@ -10,7 +10,7 @@ df = spark \
   .readStream \
   .format("kafka") \
   .option("kafka.bootstrap.servers", "localhost:9092") \
-  .option("subscribe", "bmi2") \
+  .option("subscribe", "bmi") \
   .load()
 
 
