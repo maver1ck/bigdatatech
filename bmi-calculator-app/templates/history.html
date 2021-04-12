@@ -1,0 +1,28 @@
+<!doctype html>
+
+<head>
+	<title>BMI Calculator History</title>
+</head>
+
+<h1>BMI Calculator History</h1>
+
+<body>
+	<div><a href="/">Back to Calculator</a></div>
+	{% if history|length == 0 %}
+	<div>No data</div>
+	{% else %} 
+	<div>
+	<table>
+	<tr><th>BMI</th><th>Weight</th><th>Height</th></tr>
+	{% for line in history %}
+	<tr>
+	    <td>{{ line['bmi'] }}</td>
+		<td>{{ line['weight'] }}</td>
+		<td>{{ line['height'] }}</td>
+	</tr>
+	{% endfor %}
+	</table>
+	</div>
+	{% endif %}
+
+</body>
